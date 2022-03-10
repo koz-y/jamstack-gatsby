@@ -1,3 +1,8 @@
+/* bootswatchテーマ */
+@import "~bootswatch/dist/minty/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/minty/bootswatch";
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
