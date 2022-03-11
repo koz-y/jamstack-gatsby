@@ -17,85 +17,90 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <Row style={{ maxWidth: `960px` }}>
-      <img src={homgeImage}></img>
+      <img
+        src={homgeImage}
+        style={{ width: `100%`, marginBottom: `2rem` }}
+      ></img>
     </Row>
 
-    <Row>
+    <Row className="mt-1">
       <Col xs={12} md={6} style={{ maxWidth: `480px` }}>
         <Row>
-          <Col>インフォメーション</Col>
+          <Col>
+            <div className="p-3 mb-2 bg-primary text-white">
+              インフォメーション
+            </div>
+          </Col>
         </Row>
         <Row>
-          <Col>インフォメーション 1</Col>
+          <Col style={{ padding: `0.5rem` }}>インフォメーション 1</Col>
         </Row>
         <Row>
-          <Col>インフォメーション2</Col>
+          <Col style={{ padding: `0.5rem` }}>インフォメーション2</Col>
         </Row>
         <Row>
-          <Col>インフォメーション3</Col>
+          <Col style={{ padding: `0.5rem` }}>インフォメーション3</Col>
         </Row>
         <Row>
-          <Col>インフォメーション4</Col>
+          <Col style={{ padding: `0.5rem` }}>インフォメーション4</Col>
         </Row>
         <Row>
-          <Col>インフォメーション5</Col>
+          <Col style={{ padding: `0.5rem` }}>インフォメーション5</Col>
         </Row>
       </Col>
       <Col xs={12} md={6} style={{ maxWidth: `480px` }}>
         <Row>
-          <Col>IR</Col>
+          <Col>
+            <div className="p-3 mb-2 bg-primary text-white">IR</div>
+          </Col>
         </Row>
         <Row>
-          <Col>IR情報</Col>
+          <Col style={{ padding: `0.5rem` }}>決算報告書</Col>
         </Row>
         <Row>
-          <Col>社長ブログ</Col>
+          <Col style={{ padding: `0.5rem` }}>社長挨拶</Col>
         </Row>
         <Row>
-          <Col>広告スペース</Col>
+          <Col style={{ padding: `0.5rem` }}>広告スペース</Col>
         </Row>
         <Row>
-          <Col>広告スペース</Col>
-        </Row>
-        <Row>
-          <Col>インフォメーション5</Col>
+          <Col style={{ padding: `0.5rem` }}>広告スペース</Col>
         </Row>
       </Col>
     </Row>
 
-    <Row>
-      <Col>事業内容</Col>
-    </Row>
-    <Row>
+    <Row className="mt-3">
       <Col>
+        <div className="p-3 mb-2 bg-primary text-white">事業内容</div>
+      </Col>
+    </Row>
+    <Row>
+      <Col style={{ maxWidth: `960px` }}>
         <Row>
-          <Col md="4">
-            <Card>
+          <Col xs={6} md={4}>
+            <Card bg="light" border="primary">
               <Card.Img src={jigyo1Img}></Card.Img>
               <Card.Body>
-                <Card.Title>事業内容1</Card.Title>
-                <Card.Text>吾輩は猫である。名前はまだ無い。</Card.Text>
-              </Card.Body>{" "}
+                <Card.Title>軌道上デブリ除去</Card.Title>
+              </Card.Body>
             </Card>
           </Col>
 
-          <Col md="4">
-            <Card>
+          <Col xs={6} md={4}>
+            <Card bg="light" border="primary">
               <Card.Img src={jigyo2Img}></Card.Img>
               <Card.Body>
-                <Card.Title>事業内容2</Card.Title>
-                <Card.Text>吾輩は猫である。名前はまだ無い。</Card.Text>
-              </Card.Body>{" "}
+                <Card.Title>テレポーテーションゲート開設</Card.Title>
+              </Card.Body>
             </Card>
           </Col>
 
-          <Col md="4">
-            <Card>
+          <Col xs={6} md={4}>
+            <Card bg="light" border="primary">
               <Card.Img src={jigyo3Img}></Card.Img>
               <Card.Body>
-                <Card.Title>事業内容3</Card.Title>
-                <Card.Text>吾輩は猫である。名前はまだ無い。</Card.Text>
-              </Card.Body>{" "}
+                <Card.Title>量子コントロール</Card.Title>
+              </Card.Body>
             </Card>
           </Col>
         </Row>
