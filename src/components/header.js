@@ -7,7 +7,7 @@ const Header = ({ siteTitle }) => {
   return (
     <Navbar bg="dark" expand="lg">
       <Container>
-        <Navbar.Brand as={Link} href="/">
+        <Navbar.Brand as={Link} to="/">
           {siteTitle}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-bavbar-nav"></Navbar.Toggle>

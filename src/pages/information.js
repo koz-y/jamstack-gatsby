@@ -8,13 +8,13 @@ import Seo from "../components/seo"
 const InformationPage = ({ data }) => {
   return (
     <Layout>
-      <Seo></Seo>
+      <Seo title="インフォメーション"></Seo>
 
       <Row>
         <Col className="mt-5"></Col>
       </Row>
 
-      <Row>
+      <Row style={{ maxWidth: `960px` }}>
         <Col>
           <h1>インフォメーション</h1>
         </Col>

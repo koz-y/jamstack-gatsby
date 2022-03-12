@@ -16,7 +16,7 @@ const JigyoPage = () => {
         <Col className="mt-5"></Col>
       </Row>
 
-      <Row>
+      <Row style={{ maxWidth: `960px` }}>
         <Col>
           <h1>事業内容ページ</h1>
         </Col>

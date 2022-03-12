@@ -13,7 +13,7 @@ const ContactPage = () => {
         <Col className="mt-5"></Col>
       </Row>
 
-      <Row>
+      <Row style={{ maxWidth: `960px` }}>
         <Col>
           <div>
             <h1>お問い合わせ</h1>
