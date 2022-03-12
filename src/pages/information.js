@@ -29,7 +29,11 @@ const InformationPage = ({ data }) => {
           <Col xs={12} md={6} key={node.fields.slug}>
             <Card>
               <Card.Body>
-                <Card.Title>{node.frontmatter.title}</Card.Title>
+                <Card.Title>
+                  <Link to={`${node.fields.slug}`}>
+                    {node.frontmatter.title}
+                  </Link>
+                </Card.Title>
                 <Card.Text>{node.excerpt}</Card.Text>
               </Card.Body>
             </Card>
@@ -52,7 +56,7 @@ export const query = graphql`
           }
           excerpt(pruneLength: 50, truncate: true)
           frontmatter {
-            date(formatString: "YYYY 年 MM 月 DD 日")
+            date(formatString: "YYYY年MM月DD日")
             title
           }
         }
