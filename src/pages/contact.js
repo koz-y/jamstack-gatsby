@@ -8,7 +8,6 @@ const ContactPage = () => {
   return (
     <Layout>
       <Seo title="お問い合わせ"></Seo>
-
       <Row>
         <Col className="mt-5"></Col>
       </Row>
@@ -25,38 +24,50 @@ const ContactPage = () => {
         <Col className="mt-5"></Col>
       </Row>
 
-      <Container className="mx-5">
+      <Container style={{ width: `80%` }}>
         <Row>
           <Col>
-            <Form>
-              <Form.Group controlId="formBasicText">
+            <Form method="post" name="contact" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact"></input>
+              <Form.Group controlId="formBasicText" className="mb-3">
+                <Form.Label>Your name</Form.Label>
                 <Form.Control
                   type="text"
-                  as="input"
                   placeholder="Name"
                   name="name"
                   required
                 ></Form.Control>
               </Form.Group>
-              <Form.Group controlId="formBasicEmail">
+
+              <Form.Group controlId="formBasicEmail" className="mb-3">
+                <Form.Label>Email address</Form.Label>
                 <Form.Control
                   type="email"
-                  as={"input"}
                   placeholder="EMail"
                   name="email"
                   required
                 ></Form.Control>
               </Form.Group>
-              <Form.Group controlId="formTextArea">
+              <Form.Group controlId="formTextArea" className="mb-3">
+                <Form.Label>Message</Form.Label>
                 <Form.Control
-                  as={"textarea"}
+                  as="textarea"
                   placeholder="Message"
-                  rows={"3"}
+                  rows="3"
                   name="message"
                   required
                 ></Form.Control>
               </Form.Group>
-              <Button variant="light" type="submit">
+              <Form.Group controlId="FormControlFile" className="mb-3">
+                <Form.Label>File</Form.Label>
+                <Form.Control
+                  type="file"
+                  name="file"
+                  lang="ja"
+                  label="send file"
+                ></Form.Control>
+              </Form.Group>
+              <Button variant="primary" type="submit">
                 Send
               </Button>
             </Form>
