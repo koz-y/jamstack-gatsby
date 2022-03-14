@@ -18,10 +18,12 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Seo title="Home" />
       <Row style={{ maxWidth: `960px` }}>
-        <img
-          src={homgeImage}
-          style={{ width: `100%`, marginBottom: `2rem` }}
-        ></img>
+        <Col>
+          <img
+            src={homgeImage}
+            style={{ width: `100%`, marginBottom: `2rem` }}
+          ></img>
+        </Col>
       </Row>
 
       <Row className="mt-1">
@@ -33,8 +35,10 @@ const IndexPage = ({ data }) => {
               </div>
             </Col>
           </Row>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-            <Row>
+          {data.allMarkdownRemark.edges.map(({ node }, index) => (
+            <Row key={index}>
+              {console.log(node)}
+              {console.log(index)}
               <Col className="mt-2">
                 <Link to={`${node.fields.slug}`}>
                   {node.frontmatter.date} {node.frontmatter.title}
